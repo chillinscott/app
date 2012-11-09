@@ -8,11 +8,11 @@ using developwithpassion.specifications.rhinomocks;
 
 namespace app.specs
 {
-  [Subject(typeof(AutomaticDependencyFactory))]
+  [Subject(typeof(AutomaticDependencyFactory<>))]
   public class AutomaticDependencyFactorySpecs
   {
     public abstract class concern : Observes<ICreateADependencyInstance,
-                                      AutomaticDependencyFactory>
+                                      AutomaticDependencyFactory<ItemWithItems>>
     {
     }
 
